@@ -1,0 +1,260 @@
+<html>
+
+<head>
+    <title>PREDICTION</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src='https://cdn.jsdelivr.net/npm/sweetalert2@9'></script>
+    <script src="./script.js"></script>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    
+    <style>
+        body {
+            background: #a32f80;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #341677, #a32f80);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #341677, #a32f80);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: poppins
+
+        }
+
+        .heading {
+            background: #341677;
+            /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right,  #000272,#a32f80);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #341677,#a32f80);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            font-family: poppins;
+            color: white;
+            text-align: center;
+        }
+        .answer{
+            color: #ffbd69;                  //result text okay bro samjha tujhe konsa lagra sahi woh rakhde color and all
+            background-color: #120136;     //result bg
+            opacity: 100%;
+            text-align: center;
+        }
+
+
+        
+            .copyright {
+
+            width: 100%;
+            text-align: center;
+            
+            color: #eee;
+            
+            left: 0;
+            bottom: 0;
+        }
+
+
+        .copyright p {
+            font-size: 1rem;
+        }
+
+
+        .madewithlove {
+            text-align = center;
+            margin-top: 10px;
+            font-family: 'Poppins';
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+ 
+                .fa-heart {
+                    padding: 10px;
+            color: red;
+        }
+
+                .copyright p {
+            font-size: 1rem;
+        }
+
+        .fa {
+                padding: 0px;
+                padding-bottom: 0px;
+                font-size: 30px;
+                width: 45px;
+                text-align: center;
+                text-decoration: none;
+                margin: 5px 2px;
+                border-radius: 50%;
+        }
+
+        .fa:hover {
+                opacity: 0.6;
+
+        }
+        .fa-linkedin {
+            
+            color: #0077b5;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+
+        .fa-twitter {
+                        
+                        color: #00acee;
+                        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        .fa-github {
+
+                        color:#6cc644;
+                        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        }
+        .fa-instagram {
+                        
+                        color: #ffdc80;
+                        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+                    }
+
+        .fa-heart {
+            
+            padding-center:0px;
+            padding-left:0px;
+            padding-right:18px;
+            font-size: 16px;
+            width: 8px;        
+            color: red;
+        }
+        .fa-heart:hover {
+                            opacity : 1000000;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid heading">
+        <h1><strong> Prediction Of Your Placement </strong> </h1>
+    </div>
+    <div class="container">
+        <div calss="Login">
+	<div >
+    
+        <h1 class = "answer"><b>  {{prediction_text}}  </b></h1>
+	</div>
+
+            <h4 style="text-align: center; color : white; "> Fill The Details Below To Get Your Placment Results </h4>
+
+
+            <form action="{{url_for('predict')}}" method="post">
+                <div class="form-group">
+                    <label for="Gender" style = "color: white;">Gender</label>
+                    <select class="form-control" type="text" id="Gender" name="Gender"  required>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </div>
+                
+                    <div class="col-6">
+                <div class="form-group">
+                    <label for="ssc" style = "color: white;">SSC PERCENTAGE</label>
+                    <input class="form-control" id="ssc" type="number" name="SSC PERCENTAGE" placeholder="SSC PERCENTAGE" step='0.01' required>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="form-group">
+                    <label for="hsc" style = "color: white;">HSC PERCENTAGE</label>
+                    <input class="form-control" id="hsc" type="number" name="HSC PERCENTAGE" placeholder="HSC PERCENTAGE" step='0.01' required>
+                </div>
+            
+                </div>
+                <div class="form-group">
+                    <label for="hscfield" style = "color: white;">HSC FIELD</label>
+                    <select class="form-control" id="hscfield" type="text" name="HSC FIELD" required>
+                        <option>Science</option>
+                        <option>Commerce</option>
+                        <option>Arts</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="ugdp" style = "color: white;">Under Graduation Degree percentage (%)</label>
+                    <input class="form-control" id="ugdp" type="number" name="Under Graduation Degree percentage" placeholder="Under Graduation Degree percentage" step='0.01' required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ugdf" style = "color: white;">Under Graduation Degree FIELD</label>
+                    <select class="form-control" id="ugdf" type="text" name="Under Graduation Degree FIELD" required>
+                        <option>Science and Technology</option>
+                        <option>Commerce and Management</option>
+                        <option>Architecture and Others</option>
+                    </select>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="workexp" style = "color: white;">WORK EXPERIENCE</label>
+                    <select class="form-control" id="workexp" type="text" name="WORK EXPERIENCE" required>
+                        <option>Yes</option>
+                        <option>No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="etest" style = "color: white;">EMPLOYABILITY SKILLS TEST (%)</label>
+                    <input class="form-control" id="etest" type="number" name="EMPLOYABILITY TEST" placeholder="EMPLOYABILITY TEST" step='0.01' required>
+                </div>
+
+                <button type="submit" class="btn btn-lg btn-block btn-danger">Predict</button>
+            </form>
+ 
+<!--
+
+            <form action="{{url_for('predict')}}" method="post">
+                <input type="  number" name="Gender" placeholder="Gender" required="required" />
+                <input type="  number" name="SSC PERCENTAGE" placeholder="SSC PERCENTAGE" step='0.01' required="required" />
+                <input type="  number" name="HSC PERCENTAGE" placeholder="HSC PERCENTAGE" step='0.01' required="required" />
+                <input type="  number" name="HSC FIELD" placeholder="HSC FIELD" required="required" />
+                <input type="  number" name="Under Graduation Degree percentage" placeholder="Under Graduation Degree percentage" step='0.01' required="required" />
+                <input type="  number" name="Under Graduation Degree FIELD" placeholder="Under Graduation Degree FIELD" required="required" />
+                <input type="  number" name="WORK EXPERIENCE" placeholder="WORK EXPERIENCE" required="required" />
+                <input type="  number" name="EMPLOYABILITY TEST" placeholder="EMPLOYABILITY TEST" step='0.01' required="required" />
+
+                <button type="submit" class="btn t=btn-primary btn-block btn-large">Predict</button>
+            </form>
+-->
+
+
+            
+        </div>
+        
+    </div>
+
+    <footer class="copyright">
+        <div class="madewithlove">
+             <a href="https://twitter.com/harshit_chari" class="fa fa-twitter"></a>
+            <a href="https://www.instagram.com/harshit_chari/" class="fa fa-instagram"></a>
+            <a href="https://github.com/HarshitChari" class="fa fa-github"></a>
+            <a href="https://www.linkedin.com/in/harshit-chari-1085aa181/" class="fa fa-linkedin";></a>
+            <h3>Hosted with<i class="fa fa-heart pulse" style="font-size:20px;color:red"></i> by Harshit Chari</h3>
+            <p> &copy;2020 Harshit Chari </p>
+        
+        </div>
+    </footer>
+
+    
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</html>
