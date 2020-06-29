@@ -1,4 +1,4 @@
-# Placement & Salary Predictions with Regression Models
-#### This is a basic model and a flask app that predicts the placement and salary of students according to their track record
- 
-### The URL: https://placement-salary.herokuapp.com/
+# Placement & Salary Predictions with Regression Models 
+#### This is a basic ML based model which is trained to predict placements using Kaggle datasets
+-------------------------------------------------------
+## The URL: https://placement-salary.herokuapp.com/
